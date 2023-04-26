@@ -1,5 +1,7 @@
 package configuration
 
+import "sinhasoftware.solutions/kalakaar/pkg/common"
+
 // Result is an interface that represents a result of some execution
 type Result interface {
 	// Get returns the result of the execution
@@ -15,10 +17,7 @@ type Executable interface {
 // IStep is an interface type that represents a step
 type IStep interface {
 	Executable
-	// GetId returns the id of the step
-	GetId() string
-	// SetId sets the id of the step
-	SetId(id string) IStep
+	common.ICommonIdentifier
 }
 
 // IPedal is an interface that represents a set of steps

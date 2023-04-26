@@ -5,7 +5,8 @@ import (
 	"io/ioutil"
 
 	"github.com/spf13/cobra"
-	"sinhasoftware.solutions/kalakaar/pkg/configuration"
+	"sinhasoftware.solutions/kalakaar/pkg/converter"
+	"sinhasoftware.solutions/kalakaar/pkg/input_config"
 )
 
 func init() {
@@ -23,12 +24,16 @@ and will return errors if any.`,
 				return
 			}
 
-			k, err := configuration.Parse(data)
+			k, err := input_config.Parse(data)
 			if err != nil {
 				fmt.Println("Error parsing the configuration file:", err)
 			}
 
-			errs := configuration.Validate(k)
+			p, err := converter.InputConfigToConfiguration(k)
+			if err != nil {
+				fmt.Println("Error converting the configuration file:", err)
+			}
+			errs := p.Validate()
 			if len(errs) > 0 {
 				fmt.Println("Validation failed:")
 				for _, err := range errs {

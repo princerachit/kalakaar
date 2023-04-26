@@ -1,4 +1,4 @@
-package configuration
+package input_config
 
 import "gopkg.in/yaml.v2"
 
@@ -10,9 +10,4 @@ func Parse(data []byte) (*Kalakaar, error) {
 		return nil, err
 	}
 	return &k, nil
-}
-
-// Validate function accepts a Kalakaar object and validates it
-func Validate(k *Kalakaar) []error {
-	return nil
 }

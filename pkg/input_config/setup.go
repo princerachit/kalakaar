@@ -1,21 +1,15 @@
-package configuration
+package input_config
 
-// CommonIdentifier is a struct that represents a common identifier for many components in kalaakar
-type CommonIdentifier struct {
-	// Name is the name of the component
-	Name string `json:"name" yaml:"name"`
-	// Id is the id of the component
-	Id string `json:"id" yaml:"id"`
-}
+import "sinhasoftware.solutions/kalakaar/pkg/common"
 
 // Step is a struct that represents a step
 type Step struct {
-	CommonIdentifier
+	common.CommonIdentifier
 }
 
 // Pedal is a struct that represents a set of steps
 type Pedal struct {
-	CommonIdentifier
+	common.CommonIdentifier
 	Steps []Step `json:"steps" yaml:"steps"`
 }
 
@@ -29,7 +23,7 @@ type Setup struct {
 
 // Cycle is a struct that represents a cycle in the pipeline. A cycle can have a list of pedals.
 type Cycle struct {
-	CommonIdentifier
+	common.CommonIdentifier
 	// Pedals is a list of pedals
 	Pedals []Pedal `json:"pedals" yaml:"pedals"`
 }
