@@ -12,20 +12,20 @@ type Executable interface {
 	Execute() (Result, error)
 }
 
-// Step is an interface type that represents a step
-type Step interface {
+// IStep is an interface type that represents a step
+type IStep interface {
 	Executable
 	// GetId returns the id of the step
 	GetId() string
 	// SetId sets the id of the step
-	SetId(id string) Step
+	SetId(id string) IStep
 }
 
-// Pedal is an interface that represents a set of steps
-type Pedal interface {
-	Step
+// IPedal is an interface that represents a set of steps
+type IPedal interface {
+	IStep
 	// AddStep adds a step to the pedal
-	AddStep(step Step) Pedal
+	AddStep(step IStep) IPedal
 	// ListSteps lists the steps in the pedal
-	ListSteps() []Step
+	ListSteps() []IStep
 }
