@@ -25,5 +25,6 @@ type Pipeline struct {
 
 // Validate validates the pipeline
 func (p *Pipeline) Validate() []error {
+	
 	return nil
 }
