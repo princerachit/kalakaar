@@ -36,7 +36,7 @@ func (s *DefaultStep) SetName(name string) {
 
 // Execute executes the step
 func (s *DefaultStep) Execute() (Result, []error) {
-	cmd := exec.Command(s.command)
+	cmd := exec.Command("/bin/sh", "-c", s.command)
 	out, err := cmd.Output()
 	if err != nil {
 		return nil, []error{err}
