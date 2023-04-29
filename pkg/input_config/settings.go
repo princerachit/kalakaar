@@ -1,4 +1,4 @@
-package configuration
+package input_config
 
 // Settings is a struct that represents the settings for the repository
 type Settings struct {
