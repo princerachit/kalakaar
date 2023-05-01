@@ -7,5 +7,5 @@
 set -o pipefail
 
 echo "Building the project"
-go build -o bin/ | tee bin/build.log
+go build -buildvcs=false -o bin/ | tee bin/build.log
 echo "Build completed successfully"
