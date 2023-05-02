@@ -28,5 +28,5 @@ jobs:
       run: go test -v ./...
 
     - name: package
-      run: docker build -t sinhasoftwaresolutions.azurecr.io/kalakaar
+      run: docker build -t sinhasoftwaresolutions.azurecr.io/kalakaar .
 
