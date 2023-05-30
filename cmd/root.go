@@ -12,7 +12,7 @@ var rootCmd = &cobra.Command{
 	Short: "The backend cli for kalaakar",
 	Long: `Kalakaar serves multiple purposes like validating the kaarkala.yml file,
 creating an xml tree for visual interpretation or even creating a jpeg image
-representing the pipeline visually. It also serves as a clifor the kalaakar
+representing the pipeline visually. It also serves as a cli for the kalaakar
 backend server.
 `,
 }
