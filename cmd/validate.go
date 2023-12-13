@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 
 	"github.com/spf13/cobra"
 	"sinhasoftware.solutions/kalakaar/pkg/converter"
@@ -18,7 +18,7 @@ func init() {
 		Long: `This command will validate the config file
 and will return errors if any.`,
 		Run: func(cmd *cobra.Command, args []string) {
-			data, err := ioutil.ReadFile(config)
+			data, err := os.ReadFile(config)
 			if err != nil {
 				fmt.Println("Error reading the configuration file:", err)
 				return
@@ -46,5 +46,7 @@ and will return errors if any.`,
 	}
 	rootCmd.AddCommand(validateCmd)
 
+	// todo: add support for a flag that accepts some token and validate the config further
+	// e.g. it can validate if the current plan of the user would support the features used in the config
 	validateCmd.Flags().StringVarP(&config, "config", "f", "kaarkala.yaml", "Input Configuration File")
 }
