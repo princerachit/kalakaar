@@ -5,12 +5,15 @@ import "sinhasoftware.solutions/kalakaar/pkg/common"
 // Step is a struct that represents a step
 type Step struct {
 	common.CommonIdentifier
+	// Command is the command to be executed
+	Command string
 }
 
 // Pedal is a struct that represents a set of steps
 type Pedal struct {
 	common.CommonIdentifier
-	Steps []Step `json:"steps" yaml:"steps"`
+	Steps        []Step                    `json:"steps" yaml:"steps"`
+	Dependencies []common.CommonIdentifier `json:"dependencies" yaml:"dependencies"`
 }
 
 // Setup is a struct that represents the setup for the pipeline. A setup can have a list of pedals.

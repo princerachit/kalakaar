@@ -29,4 +29,7 @@ type IPedal interface {
 	AddStep(step IStep)
 	// ListSteps lists the steps in the pedal
 	ListSteps() []IStep
+	// GetDependencies returns the dependencies of the pedal
+	// All dependencies must be executed before the pedal can be executed
+	GetDependencies() []common.ICommonIdentifier
 }
