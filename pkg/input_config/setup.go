@@ -1,6 +1,6 @@
 package input_config
 
-import "sinhasoftware.solutions/kalakaar/pkg/common"
+import "github.com/princerachit/kalakaar/pkg/common"
 
 // Step is a struct that represents a step
 type Step struct {

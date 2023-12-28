@@ -1,7 +1,7 @@
 package configuration
 
 import (
-	"sinhasoftware.solutions/kalakaar/pkg/common"
+	"github.com/princerachit/kalakaar/pkg/common"
 )
 
 // Result is an interface that represents a result of some execution

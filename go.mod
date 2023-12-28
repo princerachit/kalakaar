@@ -1,4 +1,4 @@
-module sinhasoftware.solutions/kalakaar
+module github.com/princerachit/kalakaar
 
 go 1.20
 
