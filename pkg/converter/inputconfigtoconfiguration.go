@@ -1,8 +1,8 @@
 package converter
 
 import (
-	"sinhasoftware.solutions/kalakaar/pkg/configuration"
-	"sinhasoftware.solutions/kalakaar/pkg/input_config"
+	"github.com/princerachit/kalakaar/pkg/configuration"
+	"github.com/princerachit/kalakaar/pkg/input_config"
 )
 
 // InputConfigToConfiguration function accepts a Kalakaar object and converts it to a Pipeline object
