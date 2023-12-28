@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/princerachit/kalakaar/pkg/converter"
+	"github.com/princerachit/kalakaar/pkg/input_config"
 	"github.com/spf13/cobra"
-	"sinhasoftware.solutions/kalakaar/pkg/converter"
-	"sinhasoftware.solutions/kalakaar/pkg/input_config"
 )
 
 func init() {

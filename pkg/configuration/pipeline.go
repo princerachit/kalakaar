@@ -1,6 +1,6 @@
 package configuration
 
-import "sinhasoftware.solutions/kalakaar/pkg/common"
+import "github.com/princerachit/kalakaar/pkg/common"
 
 // Cycle is a struct that represents a cycle in the pipeline. A cycle can have a list of pedals.
 type Cycle struct {
@@ -25,6 +25,6 @@ type Pipeline struct {
 
 // Validate validates the pipeline
 func (p *Pipeline) Validate() []error {
-	
+
 	return nil
 }

@@ -1,6 +1,6 @@
 package execution
 
-import "sinhasoftware.solutions/kalakaar/pkg/configuration"
+import "github.com/princerachit/kalakaar/pkg/configuration"
 
 const defaultParallelism = 20
 
